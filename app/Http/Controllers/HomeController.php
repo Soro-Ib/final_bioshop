@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home(){
         //Accueil
-        return view('home');
+
+        $produits = Product::all();
+        return view('home', compact('produits'));
     }
 
     public function apropos(){

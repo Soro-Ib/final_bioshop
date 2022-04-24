@@ -64,8 +64,8 @@
             <ul>
                 <li><a class="nav-link scrollto active" href="{{route('home')}}">Accueil</a></li>
                 <li><a class="nav-link scrollto" href="{{route('apropos')}}">Apropos</a></li>
-                <li><a class="nav-link scrollto" href="{{route('commande.index')}}">Commandez-ici</a></li>
-                <li><a class="nav-link scrollto " href="{{route('contact.index')}}">Contactez-nous</a></li>
+                <li><a class="nav-link scrollto" href="{{route('commande.create')}}">Commandez-ici</a></li>
+                <li><a class="nav-link scrollto " href="{{route('contact.create')}}">Contactez-nous</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
