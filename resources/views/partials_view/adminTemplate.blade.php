@@ -108,6 +108,13 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('carrousel.index')}}">
+          <i class="fa fa-sliders" aria-hidden="true"></i>
+          <span>Carrousel</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>Newsletter</span>

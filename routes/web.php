@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CarrouselController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
@@ -28,3 +29,11 @@ Route::get('/admin/commandes',  [CommandeController::class, 'index'])->name('com
 Route::get('/contactez-nous',  [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contactez-nous/save',  [ContactController::class, 'save'])->name('contact.save');
 Route::get('/admin/contacte',  [ContactController::class, 'index'])->name('contact.index');
+
+//Gestion des carrousel
+Route::get('/carrousel/create',  [CarrouselController::class, 'create'])->name('carrousel.create');
+Route::post('/carrousel/save',  [CarrouselController::class, 'save'])->name('carrousel.save');
+Route::get('/carrousel/index',  [CarrouselController::class, 'index'])->name('carrousel.index');
+Route::get('/carrousel/show/{id}',  [CarrouselController::class, 'show'])->name('carrousel.show');
+Route::post('/carrousel/update',  [CarrouselController::class, 'update'])->name('carrousel.update');
+Route::get('/carrousel/delete/{id}',  [CarrouselController::class, 'delete'])->name('carrousel.delete');

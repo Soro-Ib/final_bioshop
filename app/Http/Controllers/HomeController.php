@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carrousel;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class HomeController extends Controller
         //Accueil
 
         $produits = Product::all();
-        return view('home', compact('produits'));
+        $carrousels = Carrousel::all();
+        return view('home', compact('produits', 'carrousels'));
     }
 
     public function apropos(){
