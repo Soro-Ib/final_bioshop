@@ -28,7 +28,7 @@
         <section id="team" class="team section-bg">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h3>Nos produits <span></span></h3>
+                    <h3> <span>Nos produits</span></h3>
                     {{-- <p>st adipisci expedita at voluptas atque vitae autem.</p> --}}
                 </div>
                 <div class="row">

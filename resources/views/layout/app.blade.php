@@ -36,8 +36,6 @@
 </head>
 
 <body>
-
-
 <!-- ======= Top Bar ======= -->
 <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
@@ -55,21 +53,18 @@
 <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
-        <h1 class="logo"><a href="index.html">BioShop<span>.</span></a></h1>
+        <h1 class="logo"><a href="{{route('home')}}"><span  style="color: green">BioShop</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
-
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto active" href="{{route('home')}}">Accueil</a></li>
-                <li><a class="nav-link scrollto" href="{{route('apropos')}}">Apropos</a></li>
+                <li><a class="nav-link scrollto" href="{{route('apropos')}}">Qui sommes nous</a></li>
                 <li><a class="nav-link scrollto" href="{{route('commande.create')}}">Commandez-ici</a></li>
                 <li><a class="nav-link scrollto " href="{{route('contact.create')}}">Contactez-nous</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-
     </div>
 </header><!-- End Header -->
 
@@ -77,35 +72,18 @@
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
-
-    <div class="footer-newsletter">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <h4>Abonnez-vous</h4>
-                    <p>Abonnez-vous pour recevoir nos meilleures offres !</p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="S'abonner">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="footer-top">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-6 col-md-6 footer-contact">
-                    <h3>BioShop<span>.</span></h3>
+                <div class="col-lg-4 col-md-4 footer-contact">
+                    <h3>BioShop</h3>
                     <p>
                         Abidjan, Williamsville, Cote d'Ivoire <br>
                         <strong>Phone:</strong> +1 5589 55488 55<br>
                         <strong>Email:</strong> info@example.com<br>
                     </p>
                 </div>
-
-                <div class="col-lg-6 col-md-6 footer-links">
+                <div class="col-lg-4 col-md-4 footer-links">
                     <h4>Suivez-nous sur</h4>
                     {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
                     <div class="social-links mt-3">
@@ -113,26 +91,28 @@
                         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                     </div>
                 </div>
-
+                <div class="col-lg-4 col-md-4 footer-email">
+                    <h4>Abonnez-vous</h4>
+                    <p>Abonnez-vous pour recevoir nos meilleures offres !</p>
+                    <form action="#" method="post" class="form-group">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="submit" value="S'abonner" class="btn btn-primary">
+                        </div>                          
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="container py-4">
         <div class="copyright">
             &copy; Copyright <strong><span>Bioshop</span></strong>. Tout Droit Reservé
         </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-            {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
-        </div>
     </div>
 </footer><!-- End Footer -->
 
-<div id="preloader"></div>
+{{-- <div id="preloader"></div> --}}
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
