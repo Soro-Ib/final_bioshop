@@ -4,7 +4,7 @@
 @section('title', 'Bioshop | Accueil')
 
 @section('content')
-
+<?php $nav = "home" ?>
     <main id="main">
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">

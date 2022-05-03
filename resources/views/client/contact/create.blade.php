@@ -5,7 +5,7 @@
 @section('content')
 
 <main id="main">
-
+    <?php $nav = "contact" ?>
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">

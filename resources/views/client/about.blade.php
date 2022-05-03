@@ -3,7 +3,7 @@
 @section('title', 'Bioshop | Apropos')
 
 @section('content')
-
+<?php $nav = "apropos" ?>
 <main id="main">
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg mb-5">

@@ -23,6 +23,7 @@
                                 <th scope="col">Nom</th>
                                 <th scope="col">Contenant</th>
                                 <th scope="col">Prix</th>
+                                <th scope="col">Action</th>
                                 <th scope="col">Status</th>
                             </tr>
                         </thead>
@@ -33,6 +34,10 @@
                                     <td>{{$produit->name}}</td>
                                     <td>{{$produit->contenant}} g</td>
                                     <td>{{$produit->prix}} Fcfa</td>
+                                    <td>
+                                        <a href="{{route('produit.show', $produit->id)}}"><button class="btn btn-warning"><i class="fas fa-pen"></i></button></a>
+                                        <a href="{{route('produit.delete', $produit->id)}}" id="delete"><i class="fas fa-trash-alt btn btn-danger"></i></a>
+                                    </td>
                                     <td><span class="badge bg-success">Disponible</span></td>
                                 </tr>
                             @endforeach

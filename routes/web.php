@@ -20,6 +20,10 @@ Route::get('/produit/index', [ProductController::class, 'index'])->name('produit
 Route::get('/produit/add', [ProductController::class, 'create'])->name('produit.create');
 Route::post('/produit/save', [ProductController::class, 'save'])->name('produit.save');
 
+Route::get('/produit/show/{id}', [ProductController::class, 'show'])->name('produit.show');
+Route::post('/produit/update', [ProductController::class, 'update'])->name('produit.update');
+Route::get('/produit/delete/{id}', [ProductController::class, 'delete'])->name('produit.delete');
+
 // Gestion des commandes
 Route::get('/commander',  [CommandeController::class, 'create'])->name('commande.create');
 Route::post('/commander/save',  [CommandeController::class, 'save'])->name('commande.save');

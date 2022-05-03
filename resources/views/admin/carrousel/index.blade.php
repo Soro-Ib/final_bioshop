@@ -21,6 +21,7 @@
                         <tr>
                             <th scope="col">Image</th>
                             <th scope="col">Description</th>
+                            <th scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>

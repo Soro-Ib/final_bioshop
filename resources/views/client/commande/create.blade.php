@@ -3,7 +3,7 @@
 @section('title', 'Commander')
 
 @section('content')
-
+<?php $nav = "commande" ?>
     <main id="main">
         <div class="container col-10">
                 
@@ -58,7 +58,7 @@
                         <input type="text" name="soubara1000" placeholder="0" class="form-control">
                     </div>
                 </div>
-                <input type="submit" value="Valider ma commande" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-3">
+                <input type="submit" value="Valider ma commande" class="btn btn-primary d-grid gap-2 col-8 mx-auto mb-3">
             </form>
         </div>
     </main><!-- End #main -->

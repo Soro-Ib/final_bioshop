@@ -58,10 +58,10 @@
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="{{route('home')}}">Accueil</a></li>
-                <li><a class="nav-link scrollto" href="{{route('apropos')}}">Qui sommes nous</a></li>
-                <li><a class="nav-link scrollto" href="{{route('commande.create')}}">Commandez-ici</a></li>
-                <li><a class="nav-link scrollto " href="{{route('contact.create')}}">Contactez-nous</a></li>
+                <li><a class="<?php if($nav == "home"): ?>active<?php endif; ?>" href="{{route('home')}}">Accueil</a></li>
+                <li><a class="<?php if($nav == "apropos"): ?>active<?php endif; ?>" href="{{route('apropos')}}">Qui sommes nous</a></li>
+                <li><a class="<?php if($nav == "commande"): ?>active<?php endif; ?>" href="{{route('commande.create')}}">Commandez-ici</a></li>
+                <li><a class="<?php if($nav == "contact"): ?>active<?php endif; ?>" href="{{route('contact.create')}}">Contactez-nous</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
