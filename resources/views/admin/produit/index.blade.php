@@ -16,7 +16,7 @@
                             </a>
                         </button>
                     </div>
-                    <table class="table table-borderless datatable">
+                    <table class="table datatable">
                         <thead>
                             <tr>
                                 <th scope="col">Image</th>

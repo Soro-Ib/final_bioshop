@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{asset('assets/favicon/logo1.png')}}" rel="icon">
+    {{-- <link href="{{asset('assets/favicon/logo1.png')}}" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -53,7 +53,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="{{route('home')}}"><span  style="color: green">BioShop</span></a></h1>
+        <h1 class="logo"><a href="{{route('home')}}"></span><img src="{{asset('assets/favicon/logo1.png')}}" alt="logo"><span style="color:#c46100"> BioShop</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
         <nav id="navbar" class="navbar">
@@ -76,7 +76,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 footer-contact">
-                    <h3>BioShop</h3>
+                    <h3><img src="{{asset('assets/favicon/logo1.png')}}" alt="logo" style="width: 50px; heigth: 70px" ><span style="color:#c46100"> BioShop</a></h3>
                     <p>
                         Abidjan, Williamsville, Cote d'Ivoire <br>
                         <strong>Phone:</strong> +1 5589 55488 55<br>
@@ -94,10 +94,10 @@
                 <div class="col-lg-4 col-md-4 footer-email">
                     <h4>Abonnez-vous</h4>
                     <p>Abonnez-vous pour recevoir nos meilleures offres !</p>
-                    <form action="#" method="post" class="form-group">
+                    <form action="{{route('email.save')}}" method="post" class="form-group">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
                             <input type="submit" value="S'abonner" class="btn btn-primary">
                         </div>                          
                     </form>

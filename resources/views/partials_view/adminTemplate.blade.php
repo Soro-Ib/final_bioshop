@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  {{-- <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
-  <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
+  <link href="{{asset('assets/favicon/logo2.jpg')}}" rel="icon">
+  {{-- <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
 
   <script src="https://kit.fontawesome.com/1066a12b52.js" crossorigin="anonymous"></script>
   <!-- Vendor CSS Files -->
@@ -32,7 +32,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">HOhooooo</span>
+        <span class="d-none d-lg-block">BioShop Admin</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -41,7 +41,7 @@
       <ul class="d-flex align-items-center">
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            {{-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> --}}
             <span class="d-none d-md-block dropdown-toggle ps-2">Ibrahim Soro</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -54,7 +54,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="#">
                 <i class="bi bi-person"></i>
                 <span>Mon profile</span>
               </a>
@@ -79,7 +79,7 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
+      <li class="nav-item ">
         <a class="nav-link " href="{{route('admin')}}">
           <i class="fa fa-tachometer" aria-hidden="true"></i>
           <span>Dashboard</span>
@@ -115,7 +115,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{route('email.index')}}">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>Newsletter</span>
         </a>

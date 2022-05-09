@@ -23,7 +23,7 @@ class ProductController extends Controller
         $request->validate([
             'name'=>'required',
             'description'=>'required|max:1000',
-            'image'=>'required|image|nullable|mimes:jpeg,png,jpg|max:2000',
+            'image'=>'required|image|nullable|mimes:jpeg,png,jpg|max:7000',
             'prix'=>'required',
             'contenant'=>'required',
         ]);
@@ -57,7 +57,7 @@ class ProductController extends Controller
         $request->validate([
             'name'=>'required',
             'description'=>'required|max:1000',
-            'image'=>'required|image|nullable|mimes:jpeg,png,jpg|max:2000',
+            'image'=>'required|image|nullable|mimes:jpeg,png,jpg|max:7000',
             'prix'=>'required',
             'contenant'=>'required',
         ]);
