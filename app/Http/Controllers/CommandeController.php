@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Commande;
 use Illuminate\Http\Request;
+use Alert;
 
 class CommandeController extends Controller
 {
@@ -23,8 +24,8 @@ class CommandeController extends Controller
         $commande->piment_1000 = $request->input('piment1000');
 
         $commande->save();
-
-        return redirect('/commander')->with('status', 'Votre commande est enregistrée ! Merci d\'avoir commander sur BioShop');
+        Alert::success('Succès !', "Votre commande est enregistré");
+        return redirect('/commander');
     }
     public function index(){
         $commandes = Commande::get();
