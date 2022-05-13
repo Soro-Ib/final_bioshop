@@ -25,12 +25,12 @@
 </head>
 
 <body>
-
+  @include('sweetalert::alert')
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="#" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">BioShop Admin</span>
       </a>
@@ -122,6 +122,12 @@
         <a class="nav-link collapsed" href="{{route('email.index')}}">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>Newsletter</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('commande.client')}}">
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <span>Clients</span>
         </a>
       </li>
 

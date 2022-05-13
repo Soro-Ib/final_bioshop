@@ -24,11 +24,16 @@ Route::post('/admin/produit/save', [ProductController::class, 'save'])->name('pr
 Route::get('/admin/produit/show/{id}', [ProductController::class, 'show'])->name('produit.show')->middleware('auth');
 Route::post('/admin/produit/update', [ProductController::class, 'update'])->name('produit.update')->middleware('auth');
 Route::get('/admin/produit/delete/{id}', [ProductController::class, 'delete'])->name('produit.delete')->middleware('auth');
+Route::get('/admin/produit/activer/{id}', [ProductController::class, 'activer'])->name('produit.activer')->middleware('auth');
+Route::get('/admin/produit/desactiver/{id}', [ProductController::class, 'desactiver'])->name('produit.desactiver')->middleware('auth');
 
 // Gestion des commandes
 Route::get('/commander',  [CommandeController::class, 'create'])->name('commande.create');
 Route::post('/admin/commander/save',  [CommandeController::class, 'save'])->name('commande.save');
 Route::get('/admin/commandes',  [CommandeController::class, 'index'])->name('commande.index')->middleware('auth');
+Route::get('/admin/commandes/valider/{id}',  [CommandeController::class, 'valider'])->name('commande.valider')->middleware('auth');
+Route::get('/admin/commandes/annuler/{id}',  [CommandeController::class, 'annuler'])->name('commande.annuler')->middleware('auth');
+Route::get('/admin/clients',  [CommandeController::class, 'client'])->name('commande.client')->middleware('auth');
 
 //Gestion des contacts
 Route::get('/contactez-nous',  [ContactController::class, 'create'])->name('contact.create');

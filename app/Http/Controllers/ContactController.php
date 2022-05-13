@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
-use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ContactController extends Controller
 {
@@ -17,6 +17,8 @@ class ContactController extends Controller
         $this->validate($request, [
             'nom'=>'required',
             'telephone'=>'required',
+            'email'=>'required|email',
+            'message'=>'required|max:400',
         ]);
         $contact = new Contact();
         $contact->nom = $request->input('nom');

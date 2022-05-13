@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
@@ -42,8 +43,9 @@ class ProductController extends Controller
         $produit->contenant = $request->contenant;
         $produit->image = $filename;
         $produit->description = $request->description;
+        $produit->status = 0;
         $produit->save();
-
+        Alert::success('Succès !', "Le produit a bien été ajouté");
         return redirect(route('produit.index'));
     }
 
@@ -78,13 +80,31 @@ class ProductController extends Controller
         $produit->contenant = $request->contenant;
         $produit->image = $filename;
         $produit->description = $request->description;
+        $produit->status = 0;
         $produit->update();
+        Alert::success('Succès !', "Le produit a bien été modifier");
         return redirect(route('produit.index'));
     }
 
     public function delete($id){
         $produit = Product::find($id);
         $produit->delete();
+        return redirect(route('produit.index'));
+    }
+
+    public function activer($id){
+        $produit = Product::find($id);
+        $produit->status = 0;
+        $produit->update();
+        Alert::success('Succès !', "Le produit a bien été activé");
+        return redirect(route('produit.index'));
+    }
+
+    public function desactiver($id){
+        $produit = Product::find($id);
+        $produit->status = 1;
+        $produit->update();
+        Alert::success('Succès !', "Le produit a bien été desactivé");
         return redirect(route('produit.index'));
     }
 

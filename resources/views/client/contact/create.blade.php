@@ -28,7 +28,7 @@
                     <div class="info-box  mb-4">
                         <i class="bx bx-envelope"></i>
                         <h3>Email</h3>
-                        <p>contact@example.com</p>
+                        <p>bioshopkn@gmail.com</p>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     <div class="info-box  mb-4">
                         <i class="bx bx-phone-call"></i>
                         <h3>Telephone</h3>
-                        <p>0707000000</p>
+                        <p>+225 05 04 496 681</p>
                     </div>
                 </div>
             </div>
@@ -48,21 +48,34 @@
                 </div> --}}
 
                 <div class="container col-8">
-                    <form action="{{route('contact.save')}}" method="post" class="form-group">
+                    <form action="{{route('contact.save')}}" method="post" class="form-group" id="form_c">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <input type="text" name="nom" class="form-control" id="name" placeholder="Votre nom" required>
+                                <input type="text" name="nom" class="form-control" id="name" placeholder="Votre nom">
+                                @if ($errors->has('nom'))
+                                    <span class="errors">{{ $errors->first('nom') }}</span>
+                                @endif
                             </div>
+                            
                             <div class="col-md-6 mb-3">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Votre email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Votre email">
+                                @if ($errors->has('email'))
+                                    <span class="errors">{{ $errors->first('email') }}</span>
+                                @endif
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <input type="text" class="form-control" name="telephone" id="subject" placeholder="Telephone" required>
+                            <input type="text" class="form-control" name="telephone" id="subject" placeholder="Telephone">
+                            @if ($errors->has('telephone'))
+                                <span class="errors">{{ $errors->first('telephone') }}</span>
+                            @endif
                         </div>
                         <div class="col-md-12 mb-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                            @if ($errors->has('message'))
+                                <span class="errors">{{ $errors->first('message') }}</span>
+                            @endif
                         </div>
                 
                         <div><input type="submit" value="Envoyer" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-3"></div>
@@ -75,4 +88,11 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
+<style>#form_c .errors{
+    color: red;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+</style>
 @endsection

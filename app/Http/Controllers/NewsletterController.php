@@ -12,13 +12,13 @@ class NewsletterController extends Controller
 {
     public function save(Request $request){
         $this->validate($request, [
-            'email'=>'required',
+            'email'=>'required|unique:newsletters,email',
         ]);
         $email = new Newsletter();
         $email->email = $request->input('email');
         $email->save();
     
-        Alert::success('Merci !', 'Votre abonnement a été pris en conte');
+        // Alert::success('Merci !', 'Votre abonnement a été pris en compte');
         return back();
     }
     

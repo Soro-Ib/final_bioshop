@@ -23,6 +23,7 @@
                             <th scope="col">Contact</th>
                             <th scope="col">Addesse</th>
                             <th scope="col">Panier</th>
+                            <th scope="col">Action</th>
                             <th scope="col">Statut</th>
                         </tr>
                         </thead>
@@ -37,8 +38,26 @@
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier
                                         </a>
                                     </td>
-                                    <td><span class="badge bg-success">Validé</span></td>
-                                </tr>
+                                    <td>
+                                        @if ($commande->status == 0)
+                                            <span class="badge bg-primary"><a href="{{route('commande.valider', $commande->id)}}" style="color: white">Valider</a></span>
+                                            <span class="badge bg-danger"><a href="{{route('commande.annuler', $commande->id)}}" style="color: white">Refuser</a></span>
+                                        @elseif ($commande->status==1)
+                                            <span class="badge bg-primary"><a href="{{route('commande.annuler', $commande->id)}}" style="color: white">Annuler</a></span>
+                                        @else
+                                        <span class="badge bg-primary"><a href="{{route('commande.valider', $commande->id)}}" style="color: white">Valider</a></span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($commande->status == 0)
+                                            <span class="badge bg-warning">Non-livrée</span>
+                                        @elseif ($commande->status==1)
+                                            <span class="badge bg-success">Livrée</span>
+                                        @else
+                                            <span class="badge bg-danger">Annulée</span>
+                                        @endif
+                                    </td>
+
                                 <div class="modal fade" id="productModal{{$commande->id}}" tabindex="-1">
                                     <div class="modal-dialog modal-lg">
                                       <div class="modal-content">
@@ -49,10 +68,26 @@
                                         <div class="modal-body">
                                             <h4 style="font-weight: bold">Nombres de boites</h4>
                                             <br>
-                                            <p>Soubara 250 g : <span style="color: red">{{$commande->soubara_500}}</span> boites</p>
-                                            <p>Soubara 500 g : <span style="color: red">{{$commande->soubara_1000}}</span> boites</p>
-                                            <p>Piment 250 g : <span style="color: red">{{$commande->piment_500}}</span> boites</p>
-                                            <p>Piment 500 g : <span style="color: red">{{$commande->piment_1000}}</span> boites</p>
+                                            @if ($commande->soubara_500==null)
+                                                <p>Soubara 250 g : <span style="color: red">0</span> boites</p>
+                                            @else
+                                                <p>Soubara 250 g : <span style="color: red">{{$commande->soubara_500}}</span> boites</p>
+                                            @endif
+                                            @if ($commande->soubara_1000==null)
+                                                <p>Soubara 500 g : <span style="color: red">0</span> boites</p>
+                                            @else
+                                                <p>Soubara 500 g : <span style="color: red">{{$commande->soubara_1000}}</span> boites</p>
+                                            @endif
+                                            @if ($commande->piment_500==null)
+                                                <p>Piment 250 g : <span style="color: red">0</span> boites</p>
+                                            @else
+                                                <p>Piment 250 g : <span style="color: red">{{$commande->piment_500}}</span> boites</p>
+                                            @endif
+                                            @if ($commande->piment_1000==null)
+                                                <p>Piment 500 g : <span style="color: red">0</span> boites</p>
+                                            @else
+                                                <p>Piment 500 g : <span style="color: red">{{$commande->piment_1000}}</span> boites</p>
+                                            @endif
                                         </div>
                                         <div class="modal-footer">
                                           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>

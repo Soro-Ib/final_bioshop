@@ -37,8 +37,19 @@
                                     <td>
                                         <a href="{{route('produit.show', $produit->id)}}"><button class="btn btn-warning"><i class="fas fa-pen"></i></button></a>
                                         <a href="{{route('produit.delete', $produit->id)}}" id="delete"><i class="fas fa-trash-alt btn btn-danger"></i></a>
+                                        @if ($produit->status==0)
+                                            <a href="{{route('produit.desactiver', $produit->id)}}"><button class="btn btn-primary">Desactiver</button></a>
+                                        @else
+                                            <a href="{{route('produit.activer', $produit->id)}}"><button class="btn btn-primary">Activer</button></a>
+                                        @endif
                                     </td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
+                                    <td>
+                                        @if ($produit->status==0)
+                                            <span class="badge bg-success">En stock</span>
+                                        @else
+                                            <span class="badge bg-danger">En rupture</span>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
