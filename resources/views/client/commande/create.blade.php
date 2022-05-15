@@ -1,13 +1,13 @@
 @extends('layout.app')
 
-@section('title', 'Commander')
+@section('title', 'Passez une commande')
 
 @section('content')
 <?php $nav = "commande" ?>
     <main id="main">
         <div class="container col-10">
                 
-            <h3 class="mt-3 mb-3">Commandez vos produits et nous vous livrons....</h3>
+            <h3 class="mt-3 mb-3">Commandez vos produits et nous vous livrons dans les plus brefs délais.</h3>
             <form action="{{route('commande.save')}}" method="post" class="form-group" id="form_c">
                 @csrf
                 <div class="row mb-lg-3">
@@ -38,6 +38,9 @@
                     <div class="col-sm-6 mb-2">
                         <label style="font-weight: bold">Email</label>
                         <input type="email" name="email" id="" placeholder="Votre email" class="form-control">
+                        @if ($errors->has('email'))
+                            <span class="errors">{{ $errors->first('email') }}</span>
+                        @endif
                     </div>
                 </div>
 

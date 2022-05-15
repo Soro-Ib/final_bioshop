@@ -16,9 +16,16 @@ class CreateAdminUserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            [
             'name' => "Ibrahim Soro",
             'email' => "ibrahimsoro36@gmail.com",
             'password' => bcrypt("Bsoro96@")
+            ],
+            [
+            'name' => "Naoua Koné",
+            'email' => "bioshopci@gmail.com",
+            'password' => bcrypt("Laboutiquebio@")
+            ]
         ]);
     }
 }
