@@ -14,7 +14,7 @@
                         @foreach ($carrousels as $carrousel)
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="/images/carrousels/{{$carrousel->image}}" alt="" class="testi-img" style="width: 100%; height: 100%">
+                                    <img src="{{asset('images/carrousels/'.$carrousel->image)}}" alt="" class="testi-img" style="width: 100%; height: 100%">
                                 </div>
                             </div>
                         @endforeach
@@ -38,7 +38,7 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="member">
                             <div class="member-img">
-                                <img src="/images/products/{{$produit->image}}" class="img-fluid" alt="" style="width: 500px">
+                                <img src="{{asset('images/products/'.$produit->image)}}" class="img-fluid" alt="" style="width: 500px">
                             </div>
                             <div class="member-info">
                                 <h4>{{$produit->name}} {{$produit->contenant}} g</h4>

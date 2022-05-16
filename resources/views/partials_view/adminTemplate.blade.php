@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('assets/favicon/logo2.jpg')}}" rel="icon">
+  <link href="{{asset('assets/favicon/logo1.png')}}" rel="icon">
   {{-- <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
 
   <script src="https://kit.fontawesome.com/1066a12b52.js" crossorigin="anonymous"></script>
@@ -31,7 +31,6 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="#" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">BioShop Admin</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
