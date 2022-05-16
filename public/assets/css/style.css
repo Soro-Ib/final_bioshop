@@ -521,6 +521,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.logo-bio{
+  font-size: 40px;
+  font-weight: bold;
+  color:green;
+}
+@media (max-width: 575px) {
+  .logo-bio{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-bio{
+    font-size: 28px;
+  }
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/

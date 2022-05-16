@@ -29,8 +29,8 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="#" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/logo.png" alt="">
-                  <span  style="font-size: 40px; font-weight: bold;color:green">
+                  {{-- <img src="assets/img/logo.png" alt=""> --}}
+                  <span class="logo-bio">
                     <img src="{{asset('assets/favicon/logo1.png')}}" alt="" style="width:70px">
                      BioShop Admin
                 </span>

@@ -14,7 +14,7 @@
                         @foreach ($carrousels as $carrousel)
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img src="/images/carrousels/{{$carrousel->image}}" alt="" style="width: 100%; height: 400px">
+                                    <img src="/images/carrousels/{{$carrousel->image}}" alt="" class="testi-img" style="width: 100%; height: 100%">
                                 </div>
                             </div>
                         @endforeach

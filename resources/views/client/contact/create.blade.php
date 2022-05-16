@@ -28,7 +28,7 @@
                     <div class="info-box  mb-4">
                         <i class="bx bx-envelope"></i>
                         <h3>Email</h3>
-                        <p>bioshopkn@gmail.com</p>
+                        <p>bioshopci@gmail.com</p>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     <div class="info-box  mb-4">
                         <i class="bx bx-phone-call"></i>
                         <h3>Telephone</h3>
-                        <p>+225 05 04 496 681</p>
+                        <p>+225 05 04 49 6681</p>
                     </div>
                 </div>
             </div>
