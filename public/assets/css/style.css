@@ -978,6 +978,18 @@ section {
     height: 200px;
   }
 }
+
+@media (max-width: 420px) {
+  .swiper-slide{
+    height: 145px;
+  }
+}
+
+@media (max-width: 300px) {
+  .swiper-slide{
+    height: 125px;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
