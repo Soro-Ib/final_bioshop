@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('assets/favicon/logo2.jpg')}}" rel="icon">
+  <link href="{{asset('assets/favicon/logo1.png')}}" rel="icon">
   {{-- <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
 
   <script src="https://kit.fontawesome.com/1066a12b52.js" crossorigin="anonymous"></script>
@@ -25,13 +25,12 @@
 </head>
 
 <body>
-
+  @include('sweetalert::alert')
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+      <a href="#" class="logo d-flex align-items-center">
         <span class="d-none d-lg-block">BioShop Admin</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -41,14 +40,14 @@
       <ul class="d-flex align-items-center">
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            {{-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> --}}
-            <span class="d-none d-md-block dropdown-toggle ps-2">Ibrahim Soro</span>
+            <img src="{{asset('admin/assets/img/boy.png')}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{Auth::user()->name}}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Soro Brahima</h6>
-              <span>Data Scientist</span>
+              <h6>{{Auth::user()->name}}</h6>
+              {{-- <span>Data Scientist</span> --}}
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -63,10 +62,14 @@
               <hr class="dropdown-divider">
             </li>    
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="{{route('logout')}}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Deconnexion</span>
               </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
             </li>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
@@ -118,6 +121,12 @@
         <a class="nav-link collapsed" href="{{route('email.index')}}">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <span>Newsletter</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('commande.client')}}">
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <span>Clients</span>
         </a>
       </li>
 

@@ -23,6 +23,7 @@ class CreateCommandesTable extends Migration
             $table->integer('soubara_1000')->nullable();
             $table->integer('piment_500')->nullable();
             $table->integer('piment_1000')->nullable();
+            $table->integer('status');
             $table->timestamps();
         });
     }

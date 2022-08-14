@@ -14,7 +14,7 @@
     {{-- <link href="{{asset('assets/favicon/logo1.png')}}" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> --}}
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -23,6 +23,8 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/1066a12b52.js" crossorigin="anonymous"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -42,12 +44,12 @@
 <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">bioshopci@gmail.com</a></i>
+            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+225 05 04 49 6681</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://web.facebook.com/Bio-Shop-101351962118876" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/bioshopci/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
     </div>
 </section>
@@ -57,12 +59,11 @@
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="{{route('home')}}"></span><img src="{{asset('assets/favicon/logo1.png')}}" alt="logo"><span style="color:#c46100"> BioShop</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="<?php if($nav == "home"): ?>active<?php endif; ?>" href="{{route('home')}}">Accueil</a></li>
                 <li><a class="<?php if($nav == "apropos"): ?>active<?php endif; ?>" href="{{route('apropos')}}">Qui sommes nous</a></li>
-                <li><a class="<?php if($nav == "commande"): ?>active<?php endif; ?>" href="{{route('commande.create')}}">Commandez-ici</a></li>
+                <li><a class="<?php if($nav == "commande"): ?>active<?php endif; ?>" href="{{route('commande.create')}}">Passez une Commande</a></li>
                 <li><a class="<?php if($nav == "contact"): ?>active<?php endif; ?>" href="{{route('contact.create')}}">Contactez-nous</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
@@ -81,16 +82,16 @@
                     <h3><img src="{{asset('assets/favicon/logo1.png')}}" alt="logo" style="width: 50px; heigth: 70px" ><span style="color:#c46100"> BioShop</a></h3>
                     <p>
                         Abidjan, Williamsville, Cote d'Ivoire <br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                        <strong>Phone:</strong> +225 05 04 49 6681<br>
+                        <strong>Email:</strong> bioshopci@gmail.com<br>
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-4 footer-links">
                     <h4>Suivez-nous sur</h4>
                     {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
                     <div class="social-links mt-3">
-                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://web.facebook.com/Bio-Shop-101351962118876" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/bioshopci/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 footer-email">

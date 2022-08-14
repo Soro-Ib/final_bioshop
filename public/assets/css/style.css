@@ -521,6 +521,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.logo-bio{
+  font-size: 40px;
+  font-weight: bold;
+  color:green;
+}
+@media (max-width: 575px) {
+  .logo-bio{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-bio{
+    font-size: 28px;
+  }
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -536,6 +552,11 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+
+}
+.vertus-soubara{
+  text-align: justify;
+  margin-top: 10px;
 }
 .section-title h2 {
   font-size: 13px;
@@ -554,7 +575,7 @@ section {
   font-size: 32px;
   font-weight: 700;
 }
-.section-title h3 span {
+.section-title h3 span, .titre-vs {
   color: #d77210;
 }
 .section-title p {
@@ -955,6 +976,18 @@ section {
 @media (max-width: 576px) {
   .swiper-slide{
     height: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .swiper-slide{
+    height: 145px;
+  }
+}
+
+@media (max-width: 300px) {
+  .swiper-slide{
+    height: 125px;
   }
 }
 /*--------------------------------------------------------------
